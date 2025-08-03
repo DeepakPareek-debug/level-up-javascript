@@ -31,3 +31,17 @@ class Book {
 }
 
 // Write your code here
+class TechnicalBook extends Book{
+  constructor(title, author, ISBN, numCopies, edition){
+    super(title,author,ISBN,numCopies);
+    this.edition = edition;
+  }
+
+  getEdition(){
+    return `The current version of the book is ${this.edition}`;
+  }
+}
+
+const ANSIC = new TechnicalBook("ANSI C","R.D","1234567",5,"V2");
+console.log(ANSIC.getAvailability());
+console.log(ANSIC.getEdition()); 
